@@ -1,0 +1,17 @@
+[
+  {
+    "match": "What separates the primitive ventricle",
+    "query": "embryonic heart bulboventricular ridge diagram",
+    "field": "Back"
+  },
+  {
+    "match": "Which structure gives rise to the smooth part of the right atrium?",
+    "query": "sinus venosus smooth part right atrium anatomy diagram",
+    "field": "Back"
+  },
+  {
+    "match": "What are the derivatives of the aorticopulmonary septum?",
+    "query": "aorticopulmonary septum truncus arteriosus spiral septum diagram",
+    "field": "Back"
+  }
+]
