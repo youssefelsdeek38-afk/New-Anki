@@ -1,0 +1,67 @@
+[
+  {
+    "match": "ما المعلم التشريحي الأبرز على الحاجز بين الأذينين داخل الأذين الأيمن؟",
+    "query": "right atrium interatrial septum fossa ovalis limbus anatomy labeled diagram",
+    "field": "Image"
+  },
+  {
+    "match": "ما التركيب الذي يفصل الجزء الخشن الأمامي عن الجزء الأملس الخلفي في الأذين الأيمن؟",
+    "query": "crista terminalis right atrium pectinate muscles smooth sinus venarum labeled anatomy",
+    "field": "Image"
+  },
+  {
+    "match": "ما الأشكال الأربعة لـ <span class=\"en\">Trabeculae carneae</span> في البطين الأيمن؟",
+    "query": "right ventricle trabeculae carneae ridges bridges papillary muscles anatomy diagram",
+    "field": "Image"
+  },
+  {
+    "match": "ما المقصود بـ <span class=\"en\">Moderator band</span>؟",
+    "query": "moderator band septomarginal trabecula right ventricle labeled anatomy",
+    "field": "Image"
+  },
+  {
+    "match": "ما المكونات الخمسة لمجمع الصمام ثلاثي الشرفات؟",
+    "query": "tricuspid valve apparatus five components chordae tendineae papillary muscles annulus diagram",
+    "field": "Image"
+  },
+  {
+    "match": "ما المقصود بـ <span class=\"en\">Cardiac looping</span>؟",
+    "query": "embryonic heart tube cardiac looping dextral looping diagram",
+    "field": "Image"
+  },
+  {
+    "match": "رتّب الانتفاخات الخمسة البدائية للأنبوب القلبي من الذنبي إلى الرأسي.",
+    "query": "five primitive heart tube regions sinus venosus atrium ventricle bulbus cordis truncus arteriosus diagram",
+    "field": "Image"
+  },
+  {
+    "match": "ما مصير القرن الأيسر للجيب الوريدي؟",
+    "query": "left horn sinus venosus coronary sinus oblique vein left atrium embryology diagram",
+    "field": "Image"
+  },
+  {
+    "match": "ما مصير القرن الأيمن للجيب الوريدي؟",
+    "query": "right horn sinus venosus smooth part right atrium embryology diagram",
+    "field": "Image"
+  },
+  {
+    "match": "كيف يتكون <span class=\"en\">Ostium secundum</span>؟",
+    "query": "ostium secundum formation septum primum apoptosis atrial septation embryology diagram",
+    "field": "Image"
+  },
+  {
+    "match": "أين ينمو <span class=\"en\">Septum secundum</span>؟",
+    "query": "septum secundum foramen ovale septum primum atrial septation labeled diagram",
+    "field": "Image"
+  },
+  {
+    "match": "ما اتجاه مرور الدم عبر <span class=\"en\">Foramen ovale</span> في الحياة الجنينية؟",
+    "query": "fetal circulation foramen ovale right to left atrium blood flow diagram",
+    "field": "Image"
+  },
+  {
+    "match": "ما التغيرات الضغطيّة التي تؤدي إلى إغلاق <span class=\"en\">Foramen ovale</span> بعد الولادة؟",
+    "query": "foramen ovale closure after birth pressure changes left atrium right atrium diagram",
+    "field": "Image"
+  }
+]
