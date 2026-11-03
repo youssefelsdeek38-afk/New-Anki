@@ -1,0 +1,53 @@
+name: Enrich Anki deck with medical images
+on:
+  workflow_dispatch:
+    inputs:
+      apkg_url:
+        description: "Direct download URL for your APKG (do not commit the deck)"
+        required: true
+        type: string
+      topics_path:
+        description: "Path to topics JSON in this repository"
+        required: true
+        default: "topics.json"
+        type: string
+permissions:
+  contents: read
+  actions: write
+jobs:
+  enrich:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: python -m pip install --upgrade requests
+      - name: Download private working copy
+        env:
+          APKG_URL: ${{ inputs.apkg_url }}
+        run: |
+          python - <<'PY'
+          import os, requests
+          u=os.environ["APKG_URL"]
+          r=requests.get(u,timeout=180)
+          r.raise_for_status()
+          if not r.content.startswith(b"PK"):
+              raise SystemExit("The URL did not return an APKG/ZIP file. Use a direct-download link.")
+          open("input.apkg","wb").write(r.content)
+          print("Downloaded APKG bytes:",len(r.content))
+          PY
+      - name: Enrich deck
+        run: python anki_image_pipeline.py input.apkg "${{ inputs.topics_path }}" -o output_illustrated.apkg
+      - name: Upload result and audit report
+        uses: actions/upload-artifact@v4
+        with:
+          name: illustrated-anki-deck
+          path: |
+            output_illustrated.apkg
+            output_illustrated.apkg.report.json
+          if-no-files-found: error
+          retention-days: 7
