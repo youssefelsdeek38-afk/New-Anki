@@ -73,7 +73,7 @@ def main():
             note=hits[0]; fields=note[3].split("\x1f")
             field=t.get("field")
             if field:
-                names=[x[0] for x in con.execute("SELECT name FROM fields WHERE ntid=? ORDER BY ord",(note[2],))]
+                models=json.loads(con.execute("SELECT models FROM col").fetchone()[0])\n                model=models.get(str(note[2]),{})\n                names=[x.get("name","") for x in model.get("flds",[])]
                 if field not in names:
                     report.append({"match":match,"status":f"skipped: field {field} not found"}); continue
                 idx=names.index(field)
